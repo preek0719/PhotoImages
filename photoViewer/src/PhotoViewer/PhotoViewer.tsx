@@ -1,14 +1,14 @@
-import React from "react";  // import React (to provide access to TSX)
 import "./PhotoViewer.css"
 
+interface PhotoViewerProps {
+  image: string; 
+}
 
-export function PhotoViewer( {id}: {id: number}) {
-    let imageURL: string;
-    imageURL = `https://picsum.photos/id/${id}/1600/900.jpg`;
-  
+ export function PhotoViewer( { image }: PhotoViewerProps) {
+
     return (                
         <div className= "images">               
-            <img src = {imageURL}/>
+            <img id="coverImage" src = {image}/>
         </div>
     );
 }

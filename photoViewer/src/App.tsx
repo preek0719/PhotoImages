@@ -1,41 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
-import {PhotoViewer} from './PhotoViewer/PhotoViewer.tsx'
+import {PhotoViewer} from './PhotoViewer/PhotoViewer'
+import {ImageSelector} from './ImageSelector/ImageSelector'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+export function App() {
+//  const [count, setCount] = useState(0)
+ const [image, setImage] = useState<string>("https://picsum.photos/id/237/200/200");
 
   return (
     <>
-      <div>
+      <div>        
+        <h1>Photo Viewer</h1>  
+        <PhotoViewer image={image} />
         <div>
-      <h1>React Photo Viewer</h1>
-    
-       <PhotoViewer id={600}/> 
-
-      </div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <h2>Image Selector</h2>
+        <ImageSelector image={image} setImage={setImage} /> 
+        </div>
+      </div>    
     </>
   )
 }
