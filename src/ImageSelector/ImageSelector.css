@@ -1,0 +1,18 @@
+.image-grid {
+     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.image-grid img {
+   
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#selectedImage {
+    border: 10px,10px,10px,10px;
+}

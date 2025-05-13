@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+  }, 
+ "include": ["src/components", "custom.d.ts"],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
